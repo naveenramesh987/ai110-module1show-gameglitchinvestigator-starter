@@ -25,13 +25,26 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+**What the game does:** its a number guessing game where you try to guess a secret number and it tells you higher or lower until you get it or run out of tries.
+
+**Bugs I found:**
+- the hints were backwards, if i guessed too high it still said go higher
+- the New Game button didnt work, the game just stayed frozen after winning or losing
+- the hint messages were also just swapped in the code like Go HIGHER was on the wrong outcome
+
+**What I fixed:**
+- moved the game logic into logic_utils.py
+- removed the part that was turning the secret number into a string, that was causing the wrong comparisons
+- swapped the Go HIGHER and Go LOWER messages so they match the right outcomes
+- wrote a test to make sure check_guess(7, 42) returns Too Low, ran pytest and all 4 passed
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+![Winning game](win.png)
+
+**pytest results — all 4 tests passing:**
+
+![pytest results](pytest.png)
 
 ## 🚀 Stretch Features
 

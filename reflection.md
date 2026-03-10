@@ -39,6 +39,8 @@ I decided a bug was really fixed when I ran pytest and all tests passed, and the
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 - What change did you make that finally gave the game a stable secret number?
 
+The secret number kept changing because every time you clicked a button in Streamlit it reruns the whole script from the beginning, so the random.randint line kept generating a new number each click. It's like the page refreshes every single time you interact with it. To explain it to a friend, I would say imagine every time you click a button the whole page reloads and forgets everything it knew before, because that's what Streamlit does unless you use session state. Session state is like memory that survives the rerun, so I wrapped the secret number in a check that only creates it once and saves it there.
+
 ---
 
 ## 5. Looking ahead: your developer habits
@@ -47,3 +49,5 @@ I decided a bug was really fixed when I ran pytest and all tests passed, and the
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+One habit I want to keep is writing a pytest test right after I find a bug, before I fix it, so I can prove the fix worked instead of just assuming it did. Next time I work with AI, I would ask it to explain what a piece of code does before accepting it, because this project showed me that AI can write code that looks fine but has a hidden bug in it that you won't notice until you play the game. This project changed how I think about AI code because I used to assume if the AI wrote it it was probably correct, but now I know AI can introduce bugs just like any other developer and you have to read and test what it gives you.
