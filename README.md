@@ -25,12 +25,13 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-**What the game does:** its a number guessing game where you try to guess a secret number and it tells you higher or lower until you get it or run out of tries.
+**What the game does:** 
+- it's a number guessing game where you try to guess a secret number, and it tells you whether you need to guess higher or lower, until you get it or run out of tries.
 
 **Bugs I found:**
 - the hints were backwards, if i guessed too high it still said go higher
-- the New Game button didnt work, the game just stayed frozen after winning or losing
-- the hint messages were also just swapped in the code like Go HIGHER was on the wrong outcome
+- the New Game button didn't work, the game just stayed frozen after winning or losing
+- the hint messages were also just swapped in the code, like Go HIGHER was on the wrong outcome
 
 **What I fixed:**
 - moved the game logic into logic_utils.py
